@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Bio" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "bio" TEXT,
+    "userId" INTEGER,
+    FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
+);
