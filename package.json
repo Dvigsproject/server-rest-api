@@ -1,10 +1,15 @@
 {
   "name": "prisma-start",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "build": "ts-node --transpile-only src/index.ts",
+    "start": "yarn start",
+    "vercel-build": "prisma migrate deploy && yarn build",
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"    
   },
   "dependencies": {
     "@hapi/hapi": "^20.1.3",
