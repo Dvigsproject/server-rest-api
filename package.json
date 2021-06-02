@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "ts-node --transpile-only src/index.ts",
-    "start": "yarn start",
+    "build-ts": "ts-node --transpile-only src/index.ts",
+    "start": "yarn build",
+    "build": "npx tsc",
     "vercel-build": "prisma migrate deploy && yarn build",
     "prisma:generate": "prisma generate",
     "postinstall": "prisma generate"    
